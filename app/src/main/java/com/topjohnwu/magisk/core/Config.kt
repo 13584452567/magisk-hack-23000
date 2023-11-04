@@ -122,15 +122,15 @@ object Config : PreferenceModel, DBConfig {
     var repoOrder by preference(Key.REPO_ORDER, Value.ORDER_DATE)
 
     var suDefaultTimeout by preferenceStrInt(Key.SU_REQUEST_TIMEOUT, 10)
-    var suAutoResponse by preferenceStrInt(Key.SU_AUTO_RESPONSE, Value.SU_PROMPT)
+    var suAutoResponse by preferenceStrInt(Key.SU_AUTO_RESPONSE, Value.SU_AUTO_ALLOW)
     var suNotification by preferenceStrInt(Key.SU_NOTIFICATION, Value.NOTIFICATION_TOAST)
     var updateChannel by preferenceStrInt(Key.UPDATE_CHANNEL, defaultChannel)
 
-    var safetyNotice by preference(Key.SAFETY, true)
+    var safetyNotice by preference(Key.SAFETY, false)
     var darkTheme by preference(Key.DARK_THEME, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
     var themeOrdinal by preference(Key.THEME_ORDINAL, Theme.Piplup.ordinal)
     var suReAuth by preference(Key.SU_REAUTH, false)
-    var suTapjack by preference(Key.SU_TAPJACK, true)
+    var suTapjack by preference(Key.SU_TAPJACK, false)
     var checkUpdate by preference(Key.CHECK_UPDATES, true)
     var doh by preference(Key.DOH, false)
     var magiskHide by preference(Key.MAGISKHIDE, true)
